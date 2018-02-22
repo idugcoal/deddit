@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
+import Login from '../Login/Login';
 import styles from './App.css';
-// import StuffList from '../stuffList';
+
 
 class App extends Component {
   render() {
-    return <div className={styles.test}>deddit</div>;
+    return (
+      <div>
+        <div className={styles.test}>deddit</div>
+        <Login />
+      </div>
+    );
   }
 }
 
