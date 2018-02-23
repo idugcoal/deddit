@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import snoowrap from 'snoowrap';
 import styles from './Login.css';
+import constants from '../../constants';
 
 class Login extends Component {
   constructor(props) {
@@ -28,7 +30,18 @@ class Login extends Component {
 
   onClick(e) {
     e.preventDefault();
-    console.log(this.state.username, this.state.password)
+    const { userAgent, clientId, clientSecret, accessToken, refreshToken } = constants;
+    const r = new snoowrap({
+      userAgent,
+      clientId,
+      clientSecret,
+      accessToken,
+      refreshToken,
+      username: this.state.username,
+      password: this.state.password,
+    });
+
+    r.getHot().map(post => post.title).then(console.log);
   }
 
   render() {

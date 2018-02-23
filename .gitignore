@@ -10,7 +10,7 @@
 /build
 
 # constants
-/constants
+/src/constants
 
 # misc
 .DS_Store
