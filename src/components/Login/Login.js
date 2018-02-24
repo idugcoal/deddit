@@ -37,8 +37,8 @@ class Login extends Component {
       clientSecret,
       accessToken,
       refreshToken,
-      username: this.state.username,
-      password: this.state.password,
+      // username: this.state.username,
+      // password: this.state.password,
     });
 
     r.getHot().map(post => post.title).then(console.log);
